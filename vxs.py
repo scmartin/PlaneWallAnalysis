@@ -50,8 +50,8 @@ for i in range(int(nbin/2)-5):  # loops over choices of interface volumes
     rhoi1 = np.mean(rho[:,:i+1])  # interface density for one wall
     rhoi2 = np.mean(rho[:,nbin-i-1:nbin:1]) # interface density for other wall
     rhob = (np.mean(rho[:,i+1:nbin-i-1])) # bulk density
-    for l in range(20):  # block averaging loop
-        block = 10*(l+1)
+    for l in range(15):  # block averaging loop
+        block = 10+5*(l)
         m = int(steps/block)
         bdens = np.zeros(block) 
         f1dens = np.zeros(block)
