@@ -39,9 +39,9 @@ vfile = open("./vxs.txt","w")  # Holds the excess volumes and the associated err
 and rho_b for each choice of interface volume. Each row contains estimates for 10:200
 blocks for a given choice of interface volume
 """
-ri1err = np.zeros((int(nbin/2)-5,20))  # error in rho_i on one side of sim box
-ri2err = np.zeros((int(nbin/2)-5,20))  # error in rho_i of other hard wall
-rberr = np.zeros((int(nbin/2)-5,20))   # error in rho_b
+ri1err = np.zeros((int(nbin/2)-5,15))  # error in rho_i on one side of sim box
+ri2err = np.zeros((int(nbin/2)-5,15))  # error in rho_i of other hard wall
+rberr = np.zeros((int(nbin/2)-5,15))   # error in rho_b
 for i in range(int(nbin/2)-5):  # loops over choices of interface volumes
     yi = ybin*float(i+1)  # distance the interface extends away from the wall
 #    efname = "./error"+str(yi)+".txt"
